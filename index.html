@@ -176,7 +176,7 @@
                 <div class="w-20 h-20 bg-brand-600/20 rounded-2xl border border-brand-500/30 p-2.5 mx-auto mb-3 flex items-center justify-center shadow-inner">
                     <img src="https://iili.io/CUIfGUl.png" alt="Logo SoalMaker" class="w-full h-full object-contain rounded-lg" onerror="this.onerror=null; this.src='https://iili.io/CUIfGUl.th.png';">
                 </div>
-                <h1 class="text-2xl font-bold tracking-tight text-white">SoalMaker Pro</h1>
+                <h1 class="text-2xl font-bold tracking-tight text-white">Kelola Sola</h1>
                 <p class="text-xs text-blue-200/80 mt-1">Sistem Pembuat Naskah Ujian Sekolah</p>
             </div>
 
@@ -232,7 +232,7 @@
             </div>
 
             <div class="mt-6 pt-4 border-t border-slate-800 text-center">
-                <p class="text-[11px] text-slate-500">© 2026 SoalMaker Pro | Hak Cipta Dilindungi</p>
+                <p class="text-[11px] text-slate-500">© 2026 SoalMaker | Hak Cipta Dilindungi</p>
             </div>
         </div>
     </div>
@@ -257,7 +257,7 @@
 
                 <button onclick="switchTab('sync-tab')" id="nav-sync-tab" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm font-medium transition-all text-blue-100 hover:bg-brand-700/60 hover:text-white">
                     <i class="fa-solid fa-cloud w-5 text-center text-blue-200"></i>
-                    <span>Integrasi Google Sheets</span>
+                    <span>System Aplikasi</span>
                 </button>
 
                 <button onclick="switchTab('editor-tab')" id="nav-editor-tab" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm font-medium transition-all text-blue-100 hover:bg-brand-700/60 hover:text-white">
@@ -551,7 +551,7 @@
             <div class="bg-gradient-to-r from-emerald-900/90 to-slate-900 p-6 rounded-xl shadow-md border border-emerald-500/30 text-white space-y-5">
                 <div class="flex items-center justify-between flex-wrap gap-2 pb-3 border-b border-emerald-800/60">
                     <h3 class="text-base font-bold flex items-center gap-2 text-emerald-300">
-                        <i class="fa-solid fa-file-excel text-emerald-400 text-lg"></i> Integrasi Cloud Google Sheets
+                        <i class="fa-solid fa-file-excel text-emerald-400 text-lg"></i> System Aplikasi
                     </h3>
                     <span id="gas-status-badge" class="px-2.5 py-1 bg-slate-800 text-amber-300 border border-amber-500/40 rounded-full text-[11px] font-semibold flex items-center gap-1.5">
                         <i class="fa-solid fa-circle-exclamation"></i> Belum Terhubung
@@ -568,7 +568,7 @@
                             <p class="text-xs text-slate-200 font-medium">
                                 Bila Ingin Menghapus Data Aplikasi Silakan Pergi Ke <a href="https://docs.google.com/spreadsheets/d/1uYbS7hthOKLLtrleMrcLgjSHd3IFIROed_dTGGYQSG4/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-blue-400 underline font-bold hover:text-blue-300 transition">Database</a>
                             </p>
-                            <p class="text-[11px] text-slate-400 mt-0.5">Klik kata berwarna biru atau tombol di kanan untuk membuka spreadsheet database.</p>
+                            <p class="text-[11px] text-slate-400 mt-0.5"></p>
                         </div>
                     </div>
                     <a href="https://docs.google.com/spreadsheets/d/1uYbS7hthOKLLtrleMrcLgjSHd3IFIROed_dTGGYQSG4/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-xs font-bold flex items-center gap-2 shadow-md transition">
@@ -1696,7 +1696,7 @@
             renderQuestionForms();
             renderPaperPreview();
             updateSidebarCount();
-            showToast("Naskah soal disimpan ke riwayat & otomatis terkirim ke Google Sheets!", "success");
+            showToast("Naskah soal disimpan ke riwayat", "success");
         }
 
         function renderHistoryList() {
@@ -2117,7 +2117,7 @@
 
                 // Tarik data dari Google Sheets dan pastikan selesai diambil sepenuhnya sebelum masuk
                 if (gasWebUrl) {
-                    if (loadingSubtext) loadingSubtext.innerText = "Mengambil & memuat data terbaru dari Google Sheets...";
+                    if (loadingSubtext) loadingSubtext.innerText = "Jangan Tutup Aplikasi";
                     await fetchDataFromGoogleSheets();
                 }
 
