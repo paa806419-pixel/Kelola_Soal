@@ -1940,13 +1940,13 @@
 
         function manualFetchDataFromGoogleSheets() {
             const targetUrl = gasWebUrl || HARDCODED_GAS_URL;
-            showToast("Menarik data dari Google Sheets...", "info");
+            showToast("Menarik data", "info");
             fetchDataFromGoogleSheets(true);
         }
 
         function manualSyncWithGoogleSheets() {
             const targetUrl = gasWebUrl || HARDCODED_GAS_URL;
-            showToast("Mengirim data ke Google Sheets...", "info");
+            showToast("Mengirim data", "info");
             syncWithGoogleSheets(true);
         }
 
@@ -1966,7 +1966,7 @@
                 },
                 body: JSON.stringify(payload)
             }).then(() => {
-                if (isManual) showToast("Data berhasil disinkronkan & dikirim ke Google Sheets!", "success");
+                if (isManual) showToast("Data berhasil disinkronkan!", "success");
             }).catch(err => {
                 console.error("Gagal mengirim ke Google Sheets:", err);
                 if (isManual) showToast("Gagal mengirim data ke Google Sheets", "info");
@@ -1994,7 +1994,7 @@
                         renderPaperPreview();
                         renderHistoryList();
                         updateSidebarCount();
-                        if (isManual) showToast("Data berhasil ditarik dari Google Sheets!", "success");
+                        if (isManual) showToast("Data berhasil ditarik!", "success");
                         return true;
                     } else if (isManual) {
                         showToast("Tidak ada data atau format data tidak sesuai", "info");
